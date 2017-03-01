@@ -1,6 +1,6 @@
 var axios = require('axios');
 
-const APIXU_URL = 'http://api.apixu.com/v1/current.json?key=56a24c1b7e474877a5615750170103';
+const APIXU_URL = 'https://api.apixu.com/v1/current.json?key=56a24c1b7e474877a5615750170103';
 
 module.exports = {
   getTemp: function (location) {
