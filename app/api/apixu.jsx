@@ -9,12 +9,12 @@ module.exports = {
 
     return axios.get(requestUrl).then(function (res) {
       if (res.data.error) {
-        throw new Error(res.data.error.message);
+        throw new Error('Unable to fetch weather for that city.');
       } else {
         return res.data.current.temp_c;
       }
-    }, function(res) {
-      throw new Error(res.data.error.message);
+    }, function(err) {
+      throw new Error('Unable to fetch weather for that city.');
     });
   }
 }
